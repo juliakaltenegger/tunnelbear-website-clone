@@ -30,6 +30,7 @@ const Nav = styled.nav`
   padding-bottom: 20px;
   padding-right: 50px;
   border-bottom: 1px solid #ededed;
+  z-index: 2;
 
   & img {
     padding-left: 58px;
@@ -171,7 +172,7 @@ const ImgComputer = styled.img`
 `;
 
 const ImgTablet = styled.img`
-  width: 594px;
+  width: 40%;
   position: absolute;
   top: 113px;
   right: -170px;
