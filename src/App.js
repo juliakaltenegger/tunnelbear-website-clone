@@ -17,6 +17,17 @@ import windowsLogo from "./windows.svg";
 import iosLogo from "./iphone-logo.svg";
 import androidLogo from "./android-logo.svg";
 
+//features icons
+import globalContent from "./global-content.svg";
+import ipTracking from "./ip-tracking.svg";
+import localCensorship from "./local-censorship.svg";
+import onlinePrivacy from "./online-privacy.svg";
+import theftIcon from "./theft-icon.svg";
+import wayMore from "./way-more.svg";
+
+//section worldwide icons
+import earthIcon from "./assets/earth.svg";
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
@@ -185,23 +196,79 @@ const ImgMobile = styled.img`
   right: 270px;
 `;
 
+const BenefitsHeadline = styled.h2`
+  margin-top: 100px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+`;
+
 const SectionBenefits = styled.section`
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  grid-column-gap: 37px;
-  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 200px;
+`;
+
+const BenefitContainer = styled.div`
+  display: flex;
+  width: 47%;
+
+  & div {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+
+  & h3 {
+    margin: 20px 0px 5px 30px;
+  }
+
+  & p {
+    margin: 0px 0px 20px 30px;
+  }
 `;
 
 const SectionWorldwide = styled.section`
   background-color: #4d4d4d;
+  background-image: url(${starsBackground});
+  background-repeat: repeat;
+  background-size: 360px 360px;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
+  padding: 40px 150px 90px 140px;
 
   & h2 {
     color: #fff;
+    font-weight: bold;
+    padding-left: 45px;
   }
+
+  & h3 {
+    color: #fff;
+    font-weight: 100;
+    padding-left: 45px;
+    font-size: 18px;
+  }
+
   & p {
     color: #fff;
+    padding-left: 45px;
   }
+
+  & img {
+    width: 400px;
+  }
+`;
+
+const FlagsSection = styled.p`
+  font-size: 16px;
 `;
 
 function App() {
@@ -270,54 +337,126 @@ function App() {
           <ImgTablet src={tabletImage}></ImgTablet>
           <ImgMobile src={mobileImage}></ImgMobile>
         </SectionExplain>
-        <h2>Why millions of people are using TunnelBear</h2>
+
+        <BenefitsHeadline>
+          Why millions of people are using TunnelBear
+        </BenefitsHeadline>
         <SectionBenefits>
-          <div>
-            <h3>Stop password and data theft</h3>
-            <p>
-              HAckers can steal passwords and data over insecure public WiFi.
-              TunnelBear blocks them to keep you secure.
-            </p>
-          </div>
-          <div>
-            <h3>Access global content</h3>
-            <p>
-              Some content is only available in certain regions. TunnelBear
-              changes your virtual location so you can see it anywhere.
-            </p>
-          </div>
-          <div>
-            <h3>Bypass local censorship</h3>
-            <p>
-              Some governments block popular websites and apps. TunnelBear
-              unblocks them by changing your virtual location.
-            </p>
-          </div>
-          <div>
-            <h3>Protect your online privacy</h3>
-            <p>
-              Network owners and internet providers can see everything you do
-              online. With TunnelBear on, they can't see a thing.
-            </p>
-          </div>
-          <div>
-            <h3>Prevent IP-based tracking</h3>
-            <p>
-              Ad services use your IP address to track your behaviour across
-              sites. TunnelBear stops them by assigning you a new IP.
-            </p>
-          </div>
-          <div>
-            <h3>And way, way more</h3>
-            <p>
-              Play on new game servers, prevent speed throttling, and unblock
-              apps and websites on school and work networks.
-            </p>
-          </div>
+          <BenefitContainer>
+            <img src={theftIcon} alt="Bear thief" />
+            <div>
+              <h3>Stop password and data theft</h3>
+
+              <p>
+                Hackers can steal passwords and data over insecure public WiFi.
+                TunnelBear blocks them to keep you secure.
+              </p>
+            </div>
+          </BenefitContainer>
+          <BenefitContainer>
+            <img src={onlinePrivacy} alt="" />
+
+            <div>
+              <h3>Protect your online privacy</h3>
+
+              <p>
+                Network owners and internet providers can see everything you do
+                online. With TunnelBear on, they can't see a thing.
+              </p>
+            </div>
+          </BenefitContainer>
+          <BenefitContainer>
+            <img src={globalContent} alt="" />
+
+            <div>
+              <h3>Access global content</h3>
+
+              <p>
+                Some content is only available in certain regions. TunnelBear
+                changes your virtual location so you can see it anywhere.
+              </p>
+            </div>
+          </BenefitContainer>
+          <BenefitContainer>
+            <img src={ipTracking} alt="" />
+
+            <div>
+              <h3>Prevent IP-based tracking</h3>
+              <p>
+                Ad services use your IP address to track your behaviour across
+                sites. TunnelBear stops them by assigning you a new IP.
+              </p>
+            </div>
+          </BenefitContainer>
+          <BenefitContainer>
+            <img src={localCensorship} alt="" />
+
+            <div>
+              <h3>Bypass local censorship</h3>
+
+              <p>
+                Some governments block popular websites and apps. TunnelBear
+                unblocks them by changing your virtual location.
+              </p>
+            </div>
+          </BenefitContainer>
+
+          <BenefitContainer>
+            <img src={wayMore} alt="" />
+
+            <div>
+              <h3>And way, way more</h3>
+
+              <p>
+                Play on new game servers, prevent speed throttling, and unblock
+                apps and websites on school and work networks.
+              </p>
+            </div>
+          </BenefitContainer>
         </SectionBenefits>
         <SectionWorldwide>
-          <h2>Browse the...</h2>
-          <img src={starsBackground}></img>
+          <img src={earthIcon} alt="globe" />
+          <div>
+            <h2>Browse the internet from 23 countries.</h2>
+            <h3>
+              Discover something new, or tunnel back home to enjoy your
+              favourite websites and apps while travelling or living abroad.
+            </h3>
+            <FlagsSection>
+              <span role="img" aria-label="United Kingdom flag">
+                🇬🇧
+              </span>
+              United Kingdom <br />{" "}
+              <span role="img" aria-label="Germany  flag">
+                🇩🇪
+              </span>
+              Germany <br />{" "}
+              <span role="img" aria-label="Spain  flag">
+                🇪🇸
+              </span>
+              Spain <br />
+              <span role="img" aria-label="Netherlands  flag">
+                🇳🇱
+              </span>
+              Netherlands <br />
+              <span role="img" aria-label="Australia  flag">
+                🇦🇺
+              </span>
+              Australia <br />
+              <span role="img" aria-label="Hong Kong  flag">
+                🇭🇰
+              </span>
+              Hong Kong <br />
+              <span role="img" aria-label="Mexico  flag">
+                🇲🇽
+              </span>
+              🇲 Mexico <br />
+              <span role="img" aria-label="Romania  flag">
+                🇷🇴
+              </span>{" "}
+              Romania <br />
+            </FlagsSection>
+          </div>
         </SectionWorldwide>
       </main>
     </body>
