@@ -272,6 +272,15 @@ const FlagsSection = styled.p`
   font-size: 16px;
 `;
 
+const VpnShouldHave = styled.div`
+  margin: 50px 40px 50px 40px;
+
+  & h2 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+`;
+
 function App() {
   return (
     <body>
@@ -468,6 +477,26 @@ function App() {
             </FlagsSection>
           </div>
         </SectionWorldwide>
+        <VpnShouldHave className="vpn-should-have">
+          <h2>Everything a VPN should have (and more)</h2>
+          <div>
+            <b>Engineered for speed</b>
+            Our global server network is optimized to let you surf and stream
+            quickly. No throttling, no buffering, no fuss.
+          </div>
+          <br></br>
+          <div>
+            <b>Security you can rely on </b>
+            TunnelBear is the only VPN in the world to publish regular,
+            independent security audits of our apps.
+          </div>
+          <br></br>
+          <div>
+            <b>Strong Encryption </b>
+            TunnelBear uses strong AES 256-bit encryption by default. Weaker
+            encryption isn't even an option.
+          </div>
+        </VpnShouldHave>
       </main>
     </body>
   );
