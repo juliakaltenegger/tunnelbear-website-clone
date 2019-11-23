@@ -243,6 +243,7 @@ const SectionWorldwide = styled.section`
   display: flex;
   flex-direction: row;
   padding: 40px 150px 90px 140px;
+  margin-top: 80px;
 
   & h2 {
     color: #fff;
@@ -423,38 +424,47 @@ function App() {
               favourite websites and apps while travelling or living abroad.
             </h3>
             <FlagsSection>
-              <span role="img" aria-label="United Kingdom flag">
-                🇬🇧
-              </span>
-              United Kingdom <br />{" "}
-              <span role="img" aria-label="Germany  flag">
-                🇩🇪
-              </span>
-              Germany <br />{" "}
-              <span role="img" aria-label="Spain  flag">
-                🇪🇸
-              </span>
-              Spain <br />
-              <span role="img" aria-label="Netherlands  flag">
-                🇳🇱
-              </span>
-              Netherlands <br />
-              <span role="img" aria-label="Australia  flag">
-                🇦🇺
-              </span>
-              Australia <br />
-              <span role="img" aria-label="Hong Kong  flag">
-                🇭🇰
-              </span>
-              Hong Kong <br />
-              <span role="img" aria-label="Mexico  flag">
-                🇲🇽
-              </span>
-              🇲 Mexico <br />
-              <span role="img" aria-label="Romania  flag">
-                🇷🇴
-              </span>{" "}
-              Romania <br />
+              <div className="first-column">
+                <span role="img" aria-label="United Kingdom flag">
+                  🇬🇧
+                </span>
+                United Kingdom <br />
+                <span role="img" aria-label="Germany  flag">
+                  🇩🇪
+                </span>
+                Germany <br />
+                <span role="img" aria-label="Spain  flag">
+                  🇪🇸
+                </span>
+                Spain <br />
+                <span role="img" aria-label="Netherlands  flag">
+                  🇳🇱
+                </span>
+                Netherlands <br />
+                <span role="img" aria-label="Australia  flag">
+                  🇦🇺
+                </span>
+                Australia <br />
+                <span role="img" aria-label="Hong Kong  flag">
+                  🇭🇰
+                </span>
+                Hong Kong <br />
+                <span role="img" aria-label="Mexico  flag">
+                  🇲🇽
+                </span>
+                Mexico <br />
+                <span role="img" aria-label="Romania  flag">
+                  🇷🇴
+                </span>
+                Romania <br />
+              </div>
+              <div className="second-column">
+                United States Japan France Sweden Singapore Denmark India
+                Finland
+              </div>
+              <div className="third-column">
+                Canada Ireland Italy Switzerland Brazil Norway New Zealand
+              </div>
             </FlagsSection>
           </div>
         </SectionWorldwide>
